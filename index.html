@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Böske Sleep Performance</title>
+<title>BOSE Gesundheitsmanagement</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0f1b;color:#fff;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;scroll-behavior:smooth}
 a{text-decoration:none;color:inherit}
 nav{position:fixed;top:0;width:100%;background:rgba(10,15,27,.98);backdrop-filter:blur(12px);z-index:999;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1a2a4a}
-.logo{font-family:'Segoe UI',sans-serif;font-size:18px;font-weight:600;color:#2563eb;letter-spacing:1px}
-.logo span{color:#fff;font-size:10px;letter-spacing:2px;margin-left:8px;font-weight:500}
+.logo-container{display:flex;align-items:center;gap:12px}
+.logo-svg{width:36px;height:36px}
+.logo-text{font-family:'Segoe UI',sans-serif;font-size:16px;font-weight:700;color:#fff;letter-spacing:2px;background:linear-gradient(135deg,#2563eb,#60a5fa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-links{display:flex;gap:24px;align-items:center}
 .nav-links a{color:#94a3b8;font-size:11px;letter-spacing:1px;transition:all 0.3s;font-weight:500}
 .nav-links a:hover{color:#2563eb}
@@ -28,7 +29,21 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
 <body>
 
 <nav>
-  <div class="logo">BÖSKE <span>SLEEP</span></div>
+  <div class="logo-container">
+    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <!-- Herz -->
+      <path d="M50,85 C20,70 10,55 10,40 C10,28 18,18 28,18 C38,18 48,25 50,35 C52,25 62,18 72,18 C82,18 90,28 90,40 C90,55 80,70 50,85 Z" fill="url(#logoGradient)" opacity="0.9"/>
+      <!-- Puls-Linie -->
+      <polyline points="20,40 30,40 33,35 36,45 38,42 42,50 45,40 48,40 52,40 55,35 58,50 60,45 62,48 65,40 75,40 80,40" stroke="#60a5fa" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="logo-text">BOSE</div>
+  </div>
   <div class="nav-links">
     <a href="#audit">Sleep Audit</a>
     <a href="#methode">Methode</a>
@@ -43,7 +58,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
   <div style="max-width:800px">
     <div class="section-label">🌙 Sleep Performance für Athleten · Paderborn</div>
     <h1 style="font-family:'Segoe UI',sans-serif;font-size:56px;font-weight:700;line-height:1.2;margin-bottom:24px;background:linear-gradient(135deg,#fff,#93c5fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Dein Leistungspotenzial<br><span style="color:#2563eb">schläft mit dir.</span></h1>
-    <p style="color:#cbd5e1;font-size:17px;max-width:650px;margin:0 auto 20px;line-height:1.9">Wissenschaftlich belegt: Eine Stunde mehr Schlaf verbessert Reaktionszeit, Kraft und Ausdauer messbar. Mein Sleep Audit deckt präzise auf, was dich nachts wirklich bremst.</p>
+    <p style="color:#cbd5e1;font-size:17px;max-width:650px;margin:0 auto 20px;line-height:1.9">Wissenschaftlich belegt: Eine Stunde mehr Schlaf verbessert Reaktionszeit, Kraft und Ausdauer messbar. Das BOSE Sleep Audit deckt präzise auf, was dich nachts wirklich bremst.</p>
     <div style="color:#93c5fd;font-size:14px;letter-spacing:0.5px;margin-bottom:40px;font-weight:500">↓ Limitiertes Erstangebot: 50% Rabatt für die ersten 5 Athleten</div>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
       <a href="#preise" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:13px;letter-spacing:1px;padding:15px 40px;font-weight:600;display:inline-block;border-radius:8px;transition:all 0.3s;cursor:pointer;border:none">JETZT BUCHEN – 50% OFF</a>
@@ -151,7 +166,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
         <li style="color:#cbd5e1;font-size:14px;margin-bottom:14px;line-height:1.6;display:flex;align-items:center"><span style="color:#2563eb;margin-right:10px">✓</span>60-Min. Video-Auswertung</li>
         <li style="color:#cbd5e1;font-size:14px;line-height:1.6;display:flex;align-items:center"><span style="color:#2563eb;margin-right:10px">✓</span>Personalisierter Aktionsplan</li>
       </ul>
-      <button onclick="window.location.href='mailto:jonas.boeske@gmail.com?subject=Sleep Audit Buchung'" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:13px;letter-spacing:1px;padding:15px 32px;font-weight:600;display:block;text-align:center;width:100%;border-radius:8px;border:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.boxShadow='0 8px 20px rgba(37,99,235,0.3)'" onmouseout="this.style.boxShadow='none'">JETZT SICHERN</button>
+      <button onclick="window.open('mailto:e.bose@bose-gesundheitsmanagement.de?subject=Sleep%20Audit%20Buchung&body=Hallo%20Elias%2C%0A%0Aich%20m%C3%B6chte%20dein%20Sleep%20Audit%20zum%20Erstangebot%20buchen.%0A%0AViele%20Gr%C3%BC%C3%9Fe');" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:13px;letter-spacing:1px;padding:15px 32px;font-weight:600;display:block;text-align:center;width:100%;border-radius:8px;border:none;cursor:pointer;transition:all 0.3s" onmouseover="this.style.boxShadow='0 8px 20px rgba(37,99,235,0.3)'" onmouseout="this.style.boxShadow='none'">JETZT SICHERN</button>
     </div>
     <div style="background:linear-gradient(135deg,rgba(37,99,235,0.08),rgba(59,130,246,0.05));padding:50px 40px;text-align:left;border-radius:12px;border:1px solid rgba(37,99,235,0.2);position:relative;transition:all 0.3s" onmouseover="this.style.transform='translateY(-8px)'" onmouseout="this.style.transform='translateY(0)'">
       <div style="color:#93c5fd;font-size:12px;letter-spacing:2px;margin-bottom:16px;font-weight:600">FOLLOW-UP</div>
@@ -165,7 +180,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
         <li style="color:#cbd5e1;font-size:14px;margin-bottom:14px;line-height:1.6;display:flex;align-items:center"><span style="color:#2563eb;margin-right:10px">✓</span>Troubleshooting</li>
         <li style="color:#cbd5e1;font-size:14px;line-height:1.6;display:flex;align-items:center"><span style="color:#2563eb;margin-right:10px">✓</span>Motivation & Accountability</li>
       </ul>
-      <button onclick="window.location.href='mailto:jonas.boeske@gmail.com?subject=Follow-up Anfrage'" style="border:2px solid #2563eb;color:#93c5fd;font-size:13px;letter-spacing:1px;padding:13px 32px;font-weight:600;display:block;text-align:center;width:100%;border-radius:8px;background:rgba(37,99,235,0.1);cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='rgba(37,99,235,0.2)'" onmouseout="this.style.background='rgba(37,99,235,0.1)'">MEHR INFO</button>
+      <button onclick="window.open('mailto:e.bose@bose-gesundheitsmanagement.de?subject=Follow-up%20Anfrage&body=Hallo%20Elias%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCr%20deine%20Follow-up%20Pakete.%0A%0AViele%20Gr%C3%BC%C3%9Fe');" style="border:2px solid #2563eb;color:#93c5fd;font-size:13px;letter-spacing:1px;padding:13px 32px;font-weight:600;display:block;text-align:center;width:100%;border-radius:8px;background:rgba(37,99,235,0.1);cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='rgba(37,99,235,0.2)'" onmouseout="this.style.background='rgba(37,99,235,0.1)'">MEHR INFO</button>
     </div>
   </div>
 </section>
@@ -175,7 +190,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
   <div class="section-label">Über mich</div>
   <h2 class="section-title">Wer bin ich?</h2>
   <div style="max-width:750px;margin:0 auto 60px;text-align:left">
-    <p style="color:#cbd5e1;font-size:16px;line-height:2;margin-bottom:24px">Ich bin Jonas Böske, Sleep Performance Coach und Spezialist für Athleten-Schlaf. Mit über 8 Jahren Erfahrung in Sportphysiologie und Schlafwissenschaft habe ich hunderte von Athleten geholfen, ihre Leistung durch besseren Schlaf zu optimieren.</p>
+    <p style="color:#cbd5e1;font-size:16px;line-height:2;margin-bottom:24px">Ich bin Elias und leite BOSE Gesundheitsmanagement, spezialisiert auf Sleep Performance Coaching für Athleten. Mit über 8 Jahren Erfahrung in Sportphysiologie und Schlafwissenschaft habe ich hunderte von Athleten geholfen, ihre Leistung durch besseren Schlaf zu optimieren.</p>
     <p style="color:#cbd5e1;font-size:16px;line-height:2;margin-bottom:24px">Mein Ansatz basiert auf wissenschaftlichen Erkenntnissen, individuellem Coaching und realistischen Veränderungen. Ich verstehe, dass jeder Athlet unterschiedliche Herausforderungen hat — deshalb gibt es keine Standard-Lösungen, sondern maßgeschneiderte Strategien.</p>
     <p style="color:#cbd5e1;font-size:16px;line-height:2">Mein Ziel: Dir zu helfen, dein volles Potenzial nachts freizusetzen, damit du tagsüber dominierst.</p>
   </div>
@@ -230,8 +245,8 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
     <h2 class="section-title">Dein Schlaf. Deine Leistung. Dein Erfolg.</h2>
     <p class="section-desc">Die ersten 5 Athleten buchen zum Einführungspreis. Danach: Regelpreis. Lass dich nicht bremsen — starte jetzt dein Sleep Audit.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto">
-      <button onclick="window.open('mailto:jonas.boeske@gmail.com?subject=Sleep%20Audit%20Anfrage&body=Hallo%20Jonas%2C%0A%0Aich%20m%C3%B6chte%20mehr%20%C3%BCber%20dein%20Sleep%20Audit%20erfahren.%0A%0AViele%20Gr%C3%BC%C3%9Fe');" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:13px;letter-spacing:1px;padding:15px 30px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;border:none;cursor:pointer;transition:all 0.3s;flex:1;min-width:160px" onmouseover="this.style.boxShadow='0 8px 20px rgba(37,99,235,0.3)'" onmouseout="this.style.boxShadow='none'">📧 EMAIL SCHREIBEN</button>
-      <button onclick="window.open('https://wa.me/49151111092645?text=Hallo%20Jonas%2C%20ich%20interessiere%20mich%20f%C3%BCr%20dein%20Sleep%20Audit!');" style="border:2px solid #2563eb;color:#93c5fd;font-size:13px;letter-spacing:1px;padding:13px 30px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;background:rgba(37,99,235,0.1);cursor:pointer;transition:all 0.3s;flex:1;min-width:160px" onmouseover="this.style.background='rgba(37,99,235,0.2)'" onmouseout="this.style.background='rgba(37,99,235,0.1)'">💬 WHATSAPP</button>
+      <button onclick="window.open('mailto:e.bose@bose-gesundheitsmanagement.de?subject=Sleep%20Audit%20Anfrage&body=Hallo%20Elias%2C%0A%0Aich%20m%C3%B6chte%20mehr%20%C3%BCber%20dein%20Sleep%20Audit%20erfahren.%0A%0AViele%20Gr%C3%BC%C3%9Fe');" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;font-size:13px;letter-spacing:1px;padding:15px 30px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;border:none;cursor:pointer;transition:all 0.3s;flex:1;min-width:160px" onmouseover="this.style.boxShadow='0 8px 20px rgba(37,99,235,0.3)'" onmouseout="this.style.boxShadow='none'">📧 EMAIL SCHREIBEN</button>
+      <button onclick="window.open('https://wa.me/49151111092645?text=Hallo%20Elias%2C%20ich%20interessiere%20mich%20f%C3%BCr%20dein%20Sleep%20Audit%20bei%20BOSE%20Gesundheitsmanagement!');" style="border:2px solid #2563eb;color:#93c5fd;font-size:13px;letter-spacing:1px;padding:13px 30px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;border-radius:8px;background:rgba(37,99,235,0.1);cursor:pointer;transition:all 0.3s;flex:1;min-width:160px" onmouseover="this.style.background='rgba(37,99,235,0.2)'" onmouseout="this.style.background='rgba(37,99,235,0.1)'">💬 WHATSAPP</button>
     </div>
   </div>
 </section>
@@ -240,7 +255,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
 <footer style="padding:50px 5%;background:#050a12;border-top:1px solid rgba(37,99,235,0.2);text-align:center;color:#64748b;font-size:12px">
   <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:40px;text-align:left">
     <div>
-      <div style="font-size:16px;font-weight:600;color:#2563eb;margin-bottom:12px">BÖSKE SLEEP</div>
+      <div style="font-size:16px;font-weight:600;color:#2563eb;margin-bottom:12px">BOSE GESUNDHEITSMANAGEMENT</div>
       <p style="color:#94a3b8;font-size:12px;line-height:1.8">Sleep Performance Coaching für seriöse Athleten in Paderborn und online.</p>
     </div>
     <div>
@@ -255,7 +270,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
     <div>
       <div style="font-weight:600;color:#93c5fd;margin-bottom:12px;letter-spacing:1px;font-size:11px">KONTAKT</div>
       <ul style="list-style:none">
-        <li style="margin-bottom:8px"><a href="mailto:jonas.boeske@gmail.com" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">jonas.boeske@gmail.com</a></li>
+        <li style="margin-bottom:8px"><a href="mailto:e.bose@bose-gesundheitsmanagement.de" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">e.bose@bose-gesundheitsmanagement.de</a></li>
         <li style="margin-bottom:8px"><a href="tel:+49151111092645" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">+49 151 111 092645</a></li>
         <li style="margin-bottom:8px;color:#94a3b8">Paderborn, Deutschland</li>
         <li><a href="https://wa.me/49151111092645" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">WhatsApp verfügbar</a></li>
@@ -263,7 +278,7 @@ button{cursor:pointer;transition:all 0.3s;border:none;border-radius:6px}
     </div>
   </div>
   <div style="border-top:1px solid rgba(37,99,235,0.2);padding-top:24px;color:#475569;font-size:11px">
-    <p style="margin-bottom:10px">© 2026 Jonas Böske Sleep Performance. Alle Rechte vorbehalten.</p>
+    <p style="margin-bottom:10px">© 2026 BOSE Gesundheitsmanagement. Alle Rechte vorbehalten.</p>
     <p><a href="#" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">Datenschutz</a> · <a href="#" style="color:#94a3b8;transition:color 0.3s;margin:0 6px" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">Impressum</a> · <a href="#" style="color:#94a3b8;transition:color 0.3s" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color='#94a3b8'">AGB</a></p>
   </div>
 </footer>
